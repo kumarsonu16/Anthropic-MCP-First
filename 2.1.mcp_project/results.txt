@@ -1,0 +1,17 @@
+# Research on Agentic LLMs
+
+## Overview
+After exploring the deeplearning.ai website, I identified "Agentic LLMs" as a significant emerging trend in artificial intelligence. This term refers to Large Language Models that can act as agents - autonomously performing tasks, making decisions, and interacting with external systems on behalf of users.
+
+## Paper 1: Control at Stake: Evaluating the Security Landscape of LLM-Driven Email Agents
+- **Authors**: Jiangrong Wu, Yuhong Nan, Jianliang Wu, Zitong Yao, Zibin Zheng
+- **Published**: July 3, 2025
+- **Summary**: This research investigates security vulnerabilities in LLM email agents - AI systems that can manage and respond to emails using language models connected to email APIs. The researchers propose an "Email Agent Hijacking" (EAH) attack, which can override the original prompts of email agents, allowing attackers to gain remote control. Their evaluation tool, EAHawk, tested 1,404 email agent instances across 14 agent frameworks, 63 apps, 12 LLMs, and 20 email services. Alarmingly, all tested instances were vulnerable to hijacking, with an average of only 2.03 attack attempts needed to gain control. This highlights significant security concerns as agentic LLMs become more widely deployed for handling sensitive communications.
+
+## Paper 2: A Survey of Large Language Model Agents for Question Answering
+- **Author**: Murong Yue
+- **Published**: March 24, 2025
+- **Summary**: This survey paper explores how LLM-based agents are revolutionizing question answering systems. Unlike traditional agents that require extensive training data and struggle with generalization, LLM-based agents leverage language models as their reasoning engine and can interact with external environments. The paper examines the design of these agents across key processes: planning, question understanding, information retrieval, and answer generation. The research shows that agentic LLMs outperform both traditional QA pipelines and basic LLM question-answering systems, demonstrating the value of enabling AI systems to act autonomously when gathering and processing information.
+
+## Conclusions
+Agentic LLMs represent a significant evolution in AI capabilities, allowing language models to not just generate responses but take actions in the world. These papers highlight both the promise and potential risks of this technology. While agentic systems can dramatically improve tasks like question answering by actively retrieving and reasoning with information, they also introduce new security vulnerabilities that must be addressed. As organizations like deeplearning.ai continue to highlight advances in agentic AI, further research into both capabilities and safeguards will be essential for responsible deployment.

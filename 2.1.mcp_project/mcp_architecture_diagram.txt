@@ -1,0 +1,65 @@
+```
++---------------------------------------------------+
+|                MODEL CONTEXT PROTOCOL             |
++---------------------------------------------------+
+
++---------------------+        +---------------------+
+|     MCP HOST        |        |    MCP SERVER(S)    |
+| (AI Application)    |        | (Context Provider)  |
+|                     |        |                     |
+| +---------------+   |        | +-----------------+ |
+| | MCP CLIENT 1  |<----------->| Local Server     | |
+| +---------------+   |        | | (STDIO)         | |
+| | MCP CLIENT 2  |<----------->| Remote Server    | |
+| +---------------+   |        | | (HTTP)          | |
+| |     ...       |   |        | +-----------------+ |
+| +---------------+   |        |                     |
++---------------------+        +---------------------+
+         |                               |
+         |                               |
+         v                               v
++---------------------------------------------------+
+|                 PROTOCOL LAYERS                   |
++---------------------------------------------------+
+|                                                   |
+| +-----------------------------------------------+ |
+| |              DATA LAYER (JSON-RPC)            | |
+| |                                               | |
+| | • Lifecycle Management                        | |
+| | • Server Primitives:                          | |
+| |   - Tools: Executable functions               | |
+| |   - Resources: Contextual data                | |
+| |   - Prompts: Interaction templates            | |
+| | • Client Primitives:                          | |
+| |   - Sampling: LLM completions                 | |
+| |   - Elicitation: User input                   | |
+| |   - Logging: Debug messages                   | |
+| | • Notifications: Real-time updates            | |
+| +-----------------------------------------------+ |
+|                                                   |
+| +-----------------------------------------------+ |
+| |             TRANSPORT LAYER                   | |
+| |                                               | |
+| | • STDIO Transport: Local communication        | |
+| | • Streamable HTTP: Remote communication       | |
+| | • Authentication                              | |
+| | • Message framing                             | |
+| +-----------------------------------------------+ |
+|                                                   |
++---------------------------------------------------+
+
++---------------------------------------------------+
+|                    WORKFLOW                       |
++---------------------------------------------------+
+|                                                   |
+| 1. Client connects to server (lifecycle init)     |
+| 2. Client discovers available primitives          |
+|    (tools/list, resources/list, prompts/list)     |
+| 3. Client retrieves or executes primitives        |
+|    (tools/call, resources/get, etc.)              |
+| 4. Server can request client actions              |
+|    (sampling/complete, elicitation/request)       |
+| 5. Server sends notifications for updates         |
+|                                                   |
++---------------------------------------------------+
+```

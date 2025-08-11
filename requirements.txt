@@ -1,0 +1,8 @@
+arxiv
+dotenv
+anthropic
+mcp
+uv
+typing
+python-dotenv
+pypdf2
